@@ -1,11 +1,22 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 function Header({ text }) {
   return (
-    <div>
+    <header>
+       <div className='container'>
         <h1>{ text }</h1>
-    </div>
+      </div>
+    </header>
+   
   )
+}
+
+Header.defaultProps = {
+  text: 'Feedback UI',
+}
+
+Header.propTypes = {
+  text: PropTypes.string
 }
 
 export default Header
